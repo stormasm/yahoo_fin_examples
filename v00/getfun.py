@@ -53,7 +53,7 @@ def process(symbols,path,key):
             data = get_stats(symbol)
             out_file = path + filename
             data.to_csv(out_file)
-            util.redis_set_write(key,symbol)
+            #util.redis_set_write(key,symbol)
 
 if __name__ == "__main__":
 

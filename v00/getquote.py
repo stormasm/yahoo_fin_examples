@@ -41,7 +41,7 @@ def get_day():
 
 def build_file_name(symbol):
     day = get_day()
-    filename = f"{symbol}-fun-{day}.csv"
+    filename = f"{symbol}-quote-{day}.csv"
     return(filename)
 
 def process(symbols,path,key):
@@ -50,11 +50,13 @@ def process(symbols,path,key):
         bool = util.redis_set_read(key,symbol)
         if not bool:
             print(symbol)
-            data = get_quote_table(symbol)
+            data = get_quote_table(symbol,False)
+            # set above line to True and comment out the next line
+            # to return a Dict instead of a Table
+            # mcap = data['Market Cap']
             out_file = path + filename
-            print(data['Market Cap'])
-#           data.to_csv(out_file)
-#           util.redis_set_write(key,symbol)
+            data.to_csv(out_file)
+            #util.redis_set_write(key,symbol)
 
 if __name__ == "__main__":
 
