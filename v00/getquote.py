@@ -52,9 +52,9 @@ def process(symbols,path,key):
             print(symbol)
             data = get_quote_table(symbol)
             out_file = path + filename
-            print(data)
-#            data.to_csv(out_file)
-#            util.redis_set_write(key,symbol)
+            print(data['Market Cap'])
+#           data.to_csv(out_file)
+#           util.redis_set_write(key,symbol)
 
 if __name__ == "__main__":
 
