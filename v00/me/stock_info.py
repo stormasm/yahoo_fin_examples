@@ -1,4 +1,5 @@
 ### Changelog
+#   Line 339 change attribute and value to lowercase.
 import requests
 import pandas as pd
 import ftplib
@@ -336,7 +337,7 @@ def get_stats(ticker, headers = {'User-agent': 'Mozilla/5.0'}):
     for elt in tables[1:]:
         table = table.append(elt)
 
-    table.columns = ["Attribute" , "Value"]
+    table.columns = ["attribute" , "value"]
 
     table = table.reset_index(drop = True)
 
