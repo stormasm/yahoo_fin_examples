@@ -46,4 +46,5 @@ and one Attribute is upper case...
   df = concat(symbol, dictfileary)
 ```
 
-[when the method create_intermediate_dict gets called](https://github.com/stormasm/python-examples/blob/main/pandas/selectbuild.py#L23)
+when the method
+[create_intermediate_dict](https://github.com/stormasm/python-examples/blob/main/pandas/selectbuild.py#L23) gets called.
